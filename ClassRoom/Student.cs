@@ -14,9 +14,9 @@ namespace ClassRoom
 
         public Student(string name, int birthMonth, int birthDate)
         {
-            name = _name;
-            birthMonth = _birthMonth;
-            birthDate = _birthDate;
+            name = Name;
+            birthMonth = BirthMonth;
+            birthDate = BirthDate;
         }
 
         public string Name
