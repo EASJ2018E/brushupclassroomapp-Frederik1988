@@ -36,10 +36,33 @@ namespace ClassRoom
             get { return _birthDate; }
         }
 
+        public string Season(int birthmonth)
+        {
+            if (birthmonth <= 2 || birthmonth == 12)
+            {
+                return "winter";
+            }
+
+            if (birthmonth >= 3 && birthmonth <= 5)
+            {
+                return "spring";
+            }
+
+            if (birthmonth >= 6 && birthmonth <= 8)
+            {
+                return "summer";
+            }
+
+            if (birthmonth >= 9 && birthmonth <= 11)
+            {
+                return "autumn";
+            }
+            return null;
+        }
 
         public override string ToString()
         {
-            return $"{nameof(Name)}: {Name}, {nameof(BirthMonth)}: {BirthMonth}, {nameof(BirthDate)}: {BirthDate}";
+            return $"{nameof(Name)}: {Name}, {nameof(BirthMonth)}: {BirthMonth}, {nameof(BirthDate)}: {BirthDate}, Season: {(Season(BirthMonth))}";
         }
 
        
