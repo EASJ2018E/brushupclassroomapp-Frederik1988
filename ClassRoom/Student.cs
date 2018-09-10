@@ -17,7 +17,14 @@ namespace ClassRoom
         public Student(string name, int birthMonth, int birthDate)
         {
             _name = name;
-            _birthMonth = birthMonth;
+            if (birthMonth >= 1 && birthMonth <= 12)
+            {
+                _birthMonth = birthMonth;
+            }
+            else
+            {
+                throw new ArgumentException(birthMonth + " is not a valid month");
+            }
             _birthDate = birthDate;
         }
 
@@ -35,7 +42,7 @@ namespace ClassRoom
         {
             get { return _birthDate; }
         }
-
+        
         public string Season(int birthmonth)
         {
             if (birthmonth <= 2 || birthmonth == 12)
