@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,9 +16,9 @@ namespace ClassRoom
 
         public Student(string name, int birthMonth, int birthDate)
         {
-            name = Name;
-            birthMonth = BirthMonth;
-            birthDate = BirthDate;
+            _name = name;
+            _birthMonth = birthMonth;
+            _birthDate = birthDate;
         }
 
         public string Name
@@ -33,6 +35,15 @@ namespace ClassRoom
         {
             get { return _birthDate; }
         }
+
+
+        public override string ToString()
+        {
+            return $"{nameof(Name)}: {Name}, {nameof(BirthMonth)}: {BirthMonth}, {nameof(BirthDate)}: {BirthDate}";
+        }
+
+       
+     
     }
 
 }
