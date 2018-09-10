@@ -28,7 +28,7 @@ namespace ClassRoom
 
             current.classList.ForEach(Console.WriteLine);
 
-           
+           current.SeasonCount();
             
             Console.ReadKey();
         }
